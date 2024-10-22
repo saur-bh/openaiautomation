@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QA with AI Course Progress Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        button {
+            padding: 8px 12px;
+            margin: 5px 0;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .completed {
+            text-decoration: line-through;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>QA with AI Course Progress Tracker</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Level</th>
+                <th>Course</th>
+                <th>Platform</th>
+                <th>Key Focus</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr id="course1">
+                <td>Basic</td>
+                <td><a href="https://www.coursera.org/learn/ai-for-everyone" target="_blank">AI for Everyone by Andrew Ng</a></td>
+                <td>Coursera</td>
+                <td>Introduction to AI concepts</td>
+                <td><button onclick="markComplete('course1')">Mark as Complete</button></td>
+            </tr>
+            <tr id="course2">
+                <td>Basic</td>
+                <td><a href="https://www.coursera.org/projects/generative-ai-beginners" target="_blank">Generative AI for Beginners</a></td>
+                <td>Coursera</td>
+                <td>Basics of Generative AI</td>
+                <td><button onclick="markComplete('course2')">Mark as Complete</button></td>
+            </tr>
+            <tr id="course3">
+                <td>Basic</td>
+                <td><a href="https://www.udemy.com/course/prompt-engineering/" target="_blank">Prompt Engineering for ChatGPT & Other AI Tools</a></td>
+                <td>Udemy</td>
+                <td>Crafting effective AI prompts</td>
+                <td><button onclick="markComplete('course3')">Mark as Complete</button></td>
+            </tr>
+            <tr id="course4">
+                <td>Basic</td>
+                <td><a href="https://www.udemy.com/course/selenium-webdriver-with-java-basics-to-advanced/" target="_blank">Selenium WebDriver with Java - Basics to Advanced</a></td>
+                <td>Udemy</td>
+                <td>Automation using Selenium</td>
+                <td><button onclick="markComplete('course4')">Mark as Complete</button></td>
+            </tr>
+            <tr id="course5">
+                <td>Intermediate</td>
+                <td><a href="https://www.testim.io/university/" target="_blank">AI for Testing - Testim.io University</a></td>
+                <td>Testim</td>
+                <td>AI-powered automation testing</td>
+                <td><button onclick="markComplete('course5')">Mark as Complete</button></td>
+            </tr>
+            <tr id="course6">
+                <td>Intermediate</td>
+                <td><a href="https://www.udemy.com/course/artificial-intelligence-in-software-testing/" target="_blank">Artificial Intelligence in Software Testing</a></td>
+                <td>Udemy</td>
+                <td>AI applications in QA</td>
+                <td><button onclick="markComplete('course6')">Mark as Complete</button></td>
+            </tr>
+            <tr id="course7">
+                <td>Intermediate</td>
+                <td><a href="https://www.pluralsight.com/" target="_blank">AI-Powered Exploratory Testing</a></td>
+                <td>Pluralsight</td>
+                <td>AI for exploratory testing</td>
+                <td><button onclick="markComplete('course7')">Mark as Complete</button></td>
+            </tr>
+            <tr id="course8">
+                <td>Intermediate</td>
+                <td><a href="https://applitools.com/tutorials/" target="_blank">Applitools - Visual AI & Regression Testing</a></td>
+                <td>Applitools</td>
+                <td>Visual regression testing with AI</td>
+                <td><button onclick="markComplete('course8')">Mark as Complete</button></td>
+            </tr>
+            <tr id="course9">
+                <td>Intermediate</td>
+                <td><a href="https://www.udemy.com/course/ai-for-root-cause-analysis/" target="_blank">AI for Root Cause Analysis and Bug Prediction</a></td>
+                <td>Udemy</td>
+                <td>Defect prediction and root cause analysis using AI</td>
+                <td><button onclick="markComplete('course9')">Mark as Complete</button></td>
+            </tr>
+            <tr id="course10">
+                <td>Advanced</td>
+                <td><a href="https://www.coursera.org/" target="_blank">Machine Learning for Defect Prediction</a></td>
+                <td>Coursera</td>
+                <td>Applying ML models for defect prediction</td>
+                <td><button onclick="markComplete('course10')">Mark as Complete</button></td>
+            </tr>
+            <tr id="course11">
+                <td>Advanced</td>
+                <td><a href="https://www.mabl.com/mabl-academy" target="_blank">AI for Test Automation: Mabl Academy</a></td>
+                <td>Mabl</td>
+                <td>AI-driven automation</td>
+                <td><button onclick="markComplete('course11')">Mark as Complete</button></td>
+            </tr>
+            <tr id="course12">
+                <td>Advanced</td>
+                <td><a href="https://smartbear.com/learn/performance-testing/" target="_blank">AI-Powered Performance Testing with LoadNinja</a></td>
+                <td>SmartBear</td>
+                <td>AI-based performance testing</td>
+                <td><button onclick="markComplete('course12')">Mark as Complete</button></td>
+            </tr>
+            <tr id="course13">
+                <td>Advanced</td>
+                <td><a href="https://www.udemy.com/course/conversational-ai-chatbots-rasa/" target="_blank">Rasa: Conversational AI Chatbots</a></td>
+                <td>Udemy</td>
+                <td>Building AI-driven chatbots</td>
+                <td><button onclick="markComplete('course13')">Mark as Complete</button></td>
+            </tr>
+            <tr id="course14">
+                <td>Advanced</td>
+                <td><a href="https://www.coursera.org/" target="_blank">Dialogflow: Building AI Assistants for QA</a></td>
+                <td>Coursera</td>
+                <td>Creating AI-powered assistants</td>
+                <td><button onclick="markComplete('course14')">Mark as Complete</button></td>
+            </tr>
+            <tr id="course15">
+                <td>Advanced</td>
+                <td><a href="https://www.udemy.com/course/chatgpt-for-report-generation/" target="_blank">NLP for Testers: ChatGPT for Report Generation</a></td>
+                <td>Udemy</td>
+                <td>Automating test reports using NLP</td>
+                <td><button onclick="markComplete('course15')">Mark as Complete</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        function markComplete(courseId) {
+            var row = document.getElementById(courseId);
+            if (row.classList.contains('completed')) {
+                row.classList.remove('completed');
+            } else {
+                row.classList.add('completed');
+            }
+        }
+    </script>
+</body>
+</html>
